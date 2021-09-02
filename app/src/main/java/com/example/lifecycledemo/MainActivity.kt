@@ -11,6 +11,21 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         var number = Random.nextInt(100)
         Log.e("LifeCycleDemo", number.toString())
-        Log.w("LifeCycleDemo", "Main onCreate() is called")
+        Log.w("LifeCycleDemo", "Main onCreate() is called -- $number")
     }
+
+    override fun onPause() {
+        super.onPause()
+        var number = Random.nextInt(100)
+        Log.e("LifeCycleDemo", number.toString())
+        Log.w("LifeCycleDemo", "Main onPause() is called -- $number")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        var number = Random.nextInt(100)
+        Log.e("LifeCycleDemo", number.toString())
+        Log.w("LifeCycleDemo", "Main onResume() is called -- $number")
+    }
+
 }
