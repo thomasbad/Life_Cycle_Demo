@@ -7,60 +7,59 @@ import android.util.Log
 import android.view.View
 import kotlin.random.Random
 
-class MainActivity : AppCompatActivity() {
+class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_second)
         var number = Random.nextInt(100)
         Log.e("LifeCycleDemo", number.toString())
-        Log.w("LifeCycleDemo", "Main onCreate() is called -- $number")
+        Log.w("LifeCycleDemo", "Second onCreate() is called -- $number")
     }
 
     override fun onPause() {
         super.onPause()
         var number = Random.nextInt(100)
         Log.e("LifeCycleDemo", number.toString())
-        Log.w("LifeCycleDemo", "Main onPause() is called -- $number")
+        Log.w("LifeCycleDemo", "Second onPause() is called -- $number")
     }
 
     override fun onResume() {
         super.onResume()
         var number = Random.nextInt(100)
         Log.e("LifeCycleDemo", number.toString())
-        Log.w("LifeCycleDemo", "Main onResume() is called -- $number")
+        Log.w("LifeCycleDemo", "Second onResume() is called -- $number")
     }
 
     override fun onStart() {
         super.onStart()
         var number = Random.nextInt(100)
         Log.e("LifeCycleDemo", number.toString())
-        Log.w("LifeCycleDemo", "Main onStart() is called -- $number")
+        Log.w("LifeCycleDemo", "Second onStart() is called -- $number")
     }
 
     override fun onRestart() {
         super.onRestart()
         var number = Random.nextInt(100)
         Log.e("LifeCycleDemo", number.toString())
-        Log.w("LifeCycleDemo", "Main onRestart() is called -- $number")
+        Log.w("LifeCycleDemo", "Second onRestart() is called -- $number")
     }
 
     override fun onStop() {
         super.onStop()
         var number = Random.nextInt(100)
         Log.e("LifeCycleDemo", number.toString())
-        Log.w("LifeCycleDemo", "Main onStop() is called -- $number")
+        Log.w("LifeCycleDemo", "Second onStop() is called -- $number")
     }
 
     override fun onDestroy() {
         super.onDestroy()
         var number = Random.nextInt(100)
         Log.e("LifeCycleDemo", number.toString())
-        Log.w("LifeCycleDemo", "Main onDestroy() is called -- $number")
+        Log.w("LifeCycleDemo", "Second onDestroy() is called -- $number")
     }
 
-    fun go(v:View){
-        val i = Intent(this, SecondActivity::class.java)
+    fun goBack(v: View) {
+        val i = Intent(this, MainActivity::class.java)
         startActivity(i)
     }
-
 }
